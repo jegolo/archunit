@@ -1,0 +1,12 @@
+@startuml
+[In Bounds] <<..adapter.in..>> as adapter
+[Use Cases] <<..ports.in..>> as usecase
+[Domain]   <<..domain..>> as domain
+[External] <<..ports.out..>> as out
+[Out Bounds] <<..adapter.out..>> as outbound
+
+adapter --> usecase 
+usecase --> domain
+domain --> out
+out --> outbound
+@enduml
